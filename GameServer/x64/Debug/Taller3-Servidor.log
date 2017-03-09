@@ -1,0 +1,10 @@
+﻿  windowManagement.cpp
+  Server.cpp
+d:\network\networking_t4\t4_josesuarez\networkgames\taller3-servidor\server.cpp(67): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+d:\network\networking_t4\t4_josesuarez\networkgames\taller3-servidor\server.cpp(189): warning C4244: 'argument': conversion from 'float' to 'sf::Int32', possible loss of data
+d:\network\networking_t4\t4_josesuarez\networkgames\taller3-servidor\server.cpp(276): warning C4307: '*': integral constant overflow
+d:\network\networking_t4\t4_josesuarez\networkgames\taller3-servidor\server.cpp(280): warning C4307: '*': integral constant overflow
+  CodigoChat1solo.cpp
+  Generating Code...
+  Taller3-Servidor.vcxproj -> D:\Network\Networking_T4\T4_JoseSuarez\NetworkGames\x64\Debug\Taller3-Servidor.exe
+  Taller3-Servidor.vcxproj -> D:\Network\Networking_T4\T4_JoseSuarez\NetworkGames\x64\Debug\Taller3-Servidor.pdb (Partial PDB)

@@ -1,0 +1,264 @@
+﻿  CodigoChat1solo.cpp
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(159): warning C4518: 'unsigned typedef short ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(159): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(159): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(168): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(168): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(168): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(168): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(169): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(169): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(169): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(169): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(550): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(550): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(562): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(562): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(563): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(563): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(592): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(592): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(592): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(592): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(670): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(670): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(670): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(670): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2296): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2296): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2297): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2297): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2300): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2300): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2302): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2302): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2303): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2303): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2305): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2305): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2306): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2306): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3135): error C2146: syntax error: missing ')' before identifier 'Destination'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3172): error C2146: syntax error: missing ')' before identifier 'Destination'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3355): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3379): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3377): error C2733: '__writegsword': second C linkage of overloaded function not allowed
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\intrin.h(501): note: see declaration of '__writegsword'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3399): warning C4392: 'void __writegsword(DWORD)': incorrect number of arguments for intrinsic function, expected '2' arguments
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3424): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3422): error C2733: '__addgsword': second C linkage of overloaded function not allowed
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\intrin.h(343): note: see declaration of '__addgsword'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3590): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3590): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3591): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3591): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3592): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3592): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3593): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3593): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3594): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3594): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3595): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3595): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(6048): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(6048): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(6049): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(6049): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8357): warning C4518: '__forceinline ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8357): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8357): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8358): error C2059: syntax error: 'const'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8361): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8361): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8368): warning C4518: '__forceinline ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8368): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8368): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8369): error C2059: syntax error: 'const'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8372): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8372): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8379): warning C4518: '__forceinline ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8379): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8379): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8380): error C2059: syntax error: 'const'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8383): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8383): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8391): error C2059: syntax error: 'volatile'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8395): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8395): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8404): error C2059: syntax error: 'volatile'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8408): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8408): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8417): error C2059: syntax error: 'volatile'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8421): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8421): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8939): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8939): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8940): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8940): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9848): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9848): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9849): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9849): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9850): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9850): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9878): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9878): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10231): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10231): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10231): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10231): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10324): error C3646: 'Control': unknown override specifier
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10324): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10334): error C3646: 'Control': unknown override specifier
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10334): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10399): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10399): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10400): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10400): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11091): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11091): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11098): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11098): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11143): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11143): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11150): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11150): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11203): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11203): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11209): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11209): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11918): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11918): fatal error C1003: error count exceeds 100; stopping compilation
+  Server.cpp
+Server.cpp(84): warning C4244: 'argument': conversion from 'float' to 'sf::Int32', possible loss of data
+  windowManagement.cpp
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(159): warning C4518: 'unsigned typedef short ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(159): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(159): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(168): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(168): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(168): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(168): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(169): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(169): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(169): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\shared\minwindef.h(169): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(550): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(550): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(562): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(562): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(563): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(563): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(592): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(592): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(592): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(592): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(670): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(670): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(670): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(670): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2296): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2296): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2297): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2297): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2300): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2300): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2302): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2302): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2303): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2303): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2305): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2305): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2306): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(2306): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3135): error C2146: syntax error: missing ')' before identifier 'Destination'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3172): error C2146: syntax error: missing ')' before identifier 'Destination'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3355): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3379): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3377): error C2733: '__writegsword': second C linkage of overloaded function not allowed
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\intrin.h(501): note: see declaration of '__writegsword'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3399): warning C4392: 'void __writegsword(DWORD)': incorrect number of arguments for intrinsic function, expected '2' arguments
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3424): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3422): error C2733: '__addgsword': second C linkage of overloaded function not allowed
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\intrin.h(343): note: see declaration of '__addgsword'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3590): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3590): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3591): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3591): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3592): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3592): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3593): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3593): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3594): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3594): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3595): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(3595): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(6048): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(6048): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(6049): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(6049): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8357): warning C4518: '__forceinline ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8357): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8357): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8358): error C2059: syntax error: 'const'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8361): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8361): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8368): warning C4518: '__forceinline ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8368): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8368): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8369): error C2059: syntax error: 'const'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8372): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8372): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8379): warning C4518: '__forceinline ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8379): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8379): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8380): error C2059: syntax error: 'const'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8383): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8383): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8391): error C2059: syntax error: 'volatile'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8395): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8395): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8404): error C2059: syntax error: 'volatile'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8408): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8408): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8417): error C2059: syntax error: 'volatile'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8421): error C2143: syntax error: missing ';' before '{'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8421): error C2447: '{': missing function header (old-style formal list?)
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8939): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8939): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8940): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(8940): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9848): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9848): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9849): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9849): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9850): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9850): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9878): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(9878): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10231): warning C4518: 'typedef ': storage-class or type specifier(s) unexpected here; ignored
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10231): warning C4502: 'linkage specification' requires use of keyword 'extern' and must precede all other specifiers
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10231): error C2537: 'WORD_': illegal linkage specification
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10231): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10324): error C3646: 'Control': unknown override specifier
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10324): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10334): error C3646: 'Control': unknown override specifier
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10334): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10399): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10399): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10400): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(10400): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11091): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11091): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11098): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11098): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11143): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11143): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11150): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11150): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11203): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11203): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11209): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11209): error C2238: unexpected token(s) preceding ';'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11918): error C2059: syntax error: 'string'
+C:\Program Files (x86)\Windows Kits\8.1\Include\um\winnt.h(11918): fatal error C1003: error count exceeds 100; stopping compilation

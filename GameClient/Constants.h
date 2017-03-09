@@ -1,0 +1,3 @@
+#define THREADPORT 5001
+#define REGULARPORT 5000
+#define IP "127.0.0.1"

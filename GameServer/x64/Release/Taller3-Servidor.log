@@ -1,0 +1,14 @@
+﻿  CodigoChat1solo.cpp
+  Server.cpp
+Server.cpp(63): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+Server.cpp(127): warning C4244: 'argument': conversion from 'float' to 'sf::Int32', possible loss of data
+Server.cpp(214): warning C4307: '*': integral constant overflow
+Server.cpp(218): warning C4307: '*': integral constant overflow
+  windowManagement.cpp
+  Generating code
+  273 of 274 functions (99.6%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  Taller3-Servidor.vcxproj -> D:\Network\Networking_T4\T3_JoseSuarez\NetworkGames\x64\Release\Taller3-Servidor.exe
+  Taller3-Servidor.vcxproj -> D:\Network\Networking_T4\T3_JoseSuarez\NetworkGames\x64\Release\Taller3-Servidor.pdb (Full PDB)

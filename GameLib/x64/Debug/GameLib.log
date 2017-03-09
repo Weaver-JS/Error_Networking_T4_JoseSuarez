@@ -1,0 +1,7 @@
+﻿  Player.cpp
+d:\network\networking_t4\t4_prueba\gamelib\player.cpp(100): warning C4307: '*': integral constant overflow
+d:\network\networking_t4\t4_prueba\gamelib\player.cpp(101): warning C4307: '*': integral constant overflow
+d:\network\networking_t4\t4_prueba\gamelib\player.cpp(102): warning C4307: '*': integral constant overflow
+d:\network\networking_t4\t4_prueba\gamelib\player.cpp(103): warning C4307: '*': integral constant overflow
+d:\network\networking_t4\t4_prueba\gamelib\player.cpp(104): warning C4307: '*': integral constant overflow
+  GameLib.vcxproj -> D:\Network\Networking_T4\T4_Prueba\x64\Debug\GameLib.lib
