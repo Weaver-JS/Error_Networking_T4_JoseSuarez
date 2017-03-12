@@ -19,13 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Server.h" />
+    <ClInclude Include="Client.h" />
     <ClInclude Include="windowManagement.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CodigoChat1solo.cpp" />
-    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="Client.cpp" />
     <ClCompile Include="windowManagement.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClientDiagram.cd" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{84733070-02B7-4B64-9203-707F660FA508}</ProjectGuid>

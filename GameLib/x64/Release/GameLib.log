@@ -1,1 +1,7 @@
-﻿  GameLib.vcxproj -> D:\Network\Networking_T4\T4_Prueba\x64\Release\GameLib.lib
+﻿  Player.cpp
+Player.cpp(109): warning C4307: '*': integral constant overflow
+Player.cpp(110): warning C4307: '*': integral constant overflow
+Player.cpp(111): warning C4307: '*': integral constant overflow
+Player.cpp(112): warning C4307: '*': integral constant overflow
+Player.cpp(113): warning C4307: '*': integral constant overflow
+  GameLib.vcxproj -> C:\Users\jsuarez\Downloads\Error_Networking_T4_JoseSuarez-master\x64\Release\GameLib.lib

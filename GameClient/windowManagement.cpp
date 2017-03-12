@@ -11,9 +11,8 @@ void windowManagement::init(float x, float y, std::string chatName)
 
 	FreeConsole();
 	
-		serverOrClient.initClient();
-	/*	sf::Thread client_RecvThread(&Server::recv_Client, &serverOrClient);
-		client_RecvThread.launch();*/
+	serverOrClient.initClient();
+	
 	
 
 	screenDimensions.x = x;
@@ -31,6 +30,27 @@ void windowManagement::init(float x, float y, std::string chatName)
 	chattingText.setCharacterSize(14);
 	chattingText.setFillColor(sf::Color(0, 160, 0));
 	chattingText.setStyle(sf::Text::Bold);
+
+	enemyChattingText.setString(mensaje);
+	enemyChattingText.setFont(font);
+	enemyChattingText.setCharacterSize(14);
+	enemyChattingText.setFillColor(sf::Color(0, 160, 0));
+	enemyChattingText.setStyle(sf::Text::Bold);
+
+	timer.setString(mensaje);
+	timer.setFont(font);
+	timer.setCharacterSize(14);
+	timer.setFillColor(sf::Color(0, 160, 0));
+	timer.setStyle(sf::Text::Bold);
+	timer.setPosition(0, (puntuationSeparator.getPosition().y + 25));
+
+	
+	word.setString("BACALAO");
+	word.setFont(font);
+	word.setCharacterSize(14);
+	word.setFillColor(sf::Color(0, 160, 0));
+	word.setStyle(sf::Text::Bold);
+	word.setPosition(0, (puntuationSeparator.getPosition().y + 50));
 
 	text.setString(mensaje);
 	text.setFont(font);
@@ -77,7 +97,7 @@ void windowManagement::init(float x, float y, std::string chatName)
 void windowManagement::loop()
 {
 
-	sf::Thread recv_thread(&Server::recv, &serverOrClient);
+	sf::Thread recv_thread(&Client::recv, &serverOrClient);
 	recv_thread.launch();
 	while (serverOrClient.isConnected())
 	{
@@ -102,7 +122,6 @@ void windowManagement::loop()
 							windowRenderer.close();
 						else if (evento.key.code == sf::Keyboard::Return)
 						{
-							//aMensajes.push_back(mensaje);
 
 							serverOrClient.send(mensaje);
 
@@ -129,39 +148,60 @@ void windowManagement::loop()
 						break;
 					}
 				}
+			
 
-				//serverOrClient.recv();
 				if (!serverOrClient.isConnected())
 				{
 					windowRenderer.close();
 					break;
 				}
+				if (serverOrClient.getCleanBool())
+				{
+					aMensajes.clear();
+					enemyMessages.clear();
+
+					serverOrClient.setCleanBool(false);
+				}
 
 				if (serverOrClient.getMessageRecieved().length() > 0)
 				{
-					if (serverOrClient.getMymessage() != "")
+					if (serverOrClient.getName() != "" && serverOrClient.getMymessage().length() > 0)
 					{
-						aMensajes.push_back(serverOrClient.getMessageRecieved());
+						aMensajes.push_back(serverOrClient.getName() + " " +serverOrClient.getMymessage());
 						if (aMensajes.size() > 25)
 						{
 							aMensajes.erase(aMensajes.begin(), aMensajes.begin() + 1);
 						}
-						serverOrClient.getMessageRecieved().clear();
+						serverOrClient.getMymessage().clear();
 					}
 
-					if (serverOrClient.getEnemyName() != "")
+					if (serverOrClient.getEnemyName() != "" && serverOrClient.getEnemyMessage().length() > 0)
 					{
-						enemyMessages.push_back(serverOrClient.getMessageRecieved());
+						enemyMessages.push_back(serverOrClient.getEnemyName() + " " + serverOrClient.getEnemyMessage());
 						if (enemyMessages.size() > 25)
 						{
 							enemyMessages.erase(enemyMessages.begin(), enemyMessages.begin() + 1);
 						}
-						serverOrClient.getMessageRecieved().clear();
+						serverOrClient.getEnemyMessage().clear();
 
 
 					}
 				}
 
+				if (serverOrClient.getPlayer().getWin())
+				{
+					aMensajes.clear();
+					enemyMessages.clear();
+					aMensajes.push_back(serverOrClient.getName() + " WINS");
+					enemyMessages.push_back(serverOrClient.getName() + " WINS");
+				}
+				if (serverOrClient.getPlayer().getLose())
+				{
+					aMensajes.clear();
+					enemyMessages.clear();
+					aMensajes.push_back(serverOrClient.getEnemyName() + "WINS");
+					enemyMessages.push_back(serverOrClient.getEnemyName() + "WINS");
+				}
 
 				windowRenderer.draw(separator);
 				windowRenderer.draw(separatorup);
@@ -179,7 +219,7 @@ void windowManagement::loop()
 
 				}
 			
-
+			
 			for (size_t i = 0; i < enemyMessages.size(); i++)
 			{
 
@@ -192,11 +232,18 @@ void windowManagement::loop()
 
 			std::string mensaje_ = mensaje + "_";
 			text.setString(mensaje_);
-			textName.setString(serverOrClient.getName());
-			enemyName.setString(serverOrClient.getEnemyName());
+			
+
+			
+			textName.setString(serverOrClient.getName()+ ": " + std::to_string(serverOrClient.getPlayer().getPuntuation() ));
+			enemyName.setString(serverOrClient.getEnemyName() + ": " + std::to_string(serverOrClient.getPlayer().getEnemyPuntuation()));
+			timer.setString(std::to_string(serverOrClient.getTime()));
+			word.setString(serverOrClient.getPlayer().getactualWord());
 			windowRenderer.draw(textName);
 			windowRenderer.draw(enemyName);
 			windowRenderer.draw(text);
+			windowRenderer.draw(timer);
+			windowRenderer.draw(word);
 			//NETWORKING
 
 

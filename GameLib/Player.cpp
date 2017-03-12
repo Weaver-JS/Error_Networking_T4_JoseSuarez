@@ -7,10 +7,11 @@ Player::Player()
 	
 	timer = 0;
 	puntuation = 0;
-	
+	enemyPuntuation = 0;
 	messageInfo = "";
 	name = "";
 	enemyName = "";
+	actualWord = "Escribe tu nombre para empezar la partida.";
 	win = false;
 	lose = false;
 }
@@ -45,6 +46,11 @@ void Player::setPuntuation(const int p)
 	puntuation = p;
 }
 
+void Player::setEnemyPuntuation(const int p)
+{
+	enemyPuntuation = p;
+}
+
 const std::string & Player::getName()
 {
 	return name;
@@ -60,16 +66,29 @@ const int Player::getPuntuation()
 	return puntuation;
 }
 
+const int Player::getEnemyPuntuation()
+{
+	return enemyPuntuation;
+}
+
+bool Player::getWin()
+{
+	return win;
+}
+
+bool Player::getLose()
+{
+	return lose;
+}
+
 
 
 
 std::string Player::getProtocolTag(std::string & completeMessage)
 {
 	std::string messageType;
-	//messageType.resize(completeMessage.size());
 	int length_identificator = 0;
-	if (completeMessage.size() > 3)
-	{
+	
 		for (int i = 0; i < completeMessage.size(); i++)
 		{
 			if (i > 0 && completeMessage[i - 1] == '_')
@@ -83,8 +102,8 @@ std::string Player::getProtocolTag(std::string & completeMessage)
 		}
 		completeMessage = completeMessage.substr(length_identificator, completeMessage.size() - 1);
 		return messageType;
-	}
-	return completeMessage;
+	
+	
 
 }
 
@@ -98,7 +117,7 @@ void Player::protocolManagement(std::string & completeMessage)
 {
 	std::string protocolTag = getProtocolTag(completeMessage);
 	const int name = str2int(NAME);
-	const int puntuation = str2int(PUNTUATION);
+	const int puntuationC = str2int(PUNTUATION);
 	const int word = str2int(dWORD);
 	const int success = str2int(SUCCESS);
 	const int failed = str2int(FAILED);
@@ -112,14 +131,17 @@ void Player::protocolManagement(std::string & completeMessage)
 		case name:
 			setName(completeMessage);
 			break;
-		case puntuation:
-			setPuntuation(str2int(completeMessage.c_str()));
+		case puntuationC:
+			puntuation++;
 			break;
 		case word:
+			actualWord = completeMessage;
 			break;
 		case success:
+			win = true;
 			break;
 		case failed:
+			lose = true;
 			break;
 
 		default:
@@ -136,14 +158,14 @@ void Player::protocolManagement(std::string & completeMessage)
 		case name:
 			setEnemyName(completeMessage);
 			break;
-		case puntuation:
-			setPuntuation(str2int(completeMessage.c_str()));
-			break;
-		case word:
+		case puntuationC:
+			enemyPuntuation++;
 			break;
 		case success:
+			enemyWin = true;
 			break;
 		case failed:
+			enemyLose = true;
 			break;
 
 		default:
@@ -172,3 +194,7 @@ void Player::setEnemyMessage(const std::string & ms)
 	enemyName = ms;
 }
 
+std::string & Player::getactualWord()
+{
+	return actualWord;
+}

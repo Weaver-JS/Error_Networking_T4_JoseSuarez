@@ -1,7 +1,7 @@
 
 #pragma once
 #include <SFML\Graphics.hpp>
-#include "Server.h"
+#include "Client.h"
 #include <string>
 #include <iostream>
 #include <vector>
@@ -26,6 +26,8 @@ private:
 	sf::Text chattingText;
 	sf::Text enemyChattingText;
 	sf::Text text;
+	sf::Text timer;
+	sf::Text word;
 
 	sf::Text textName;
 	sf::Text enemyName;
@@ -37,7 +39,7 @@ private:
 	sf::RectangleShape namedownSeparator;
 
 	sf::RectangleShape puntuationSeparator;
-	Server serverOrClient;
+	Client serverOrClient;
 	
 
 	windowManagement() {}

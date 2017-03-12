@@ -12,6 +12,7 @@
 #define FAILED "FAILED_"
 #define PLAYER_1 "PLAYER1_"
 #define PLAYER_2 "PLAYER2_"
+#define REGULAR_WORD "REGULAR_"
 
 
 
@@ -21,15 +22,19 @@ private:
 	std::string name;
 	std::string enemyName;
 	int puntuation;
+	int enemyPuntuation;
 	int timer;
 	
 	std::string myMessage;
 	std::string enemyMessage;
 	
 	std::string messageInfo;
-	std::string word;
+	std::string actualWord;
+
 	bool win;
 	bool lose;
+	bool enemyWin;
+	bool enemyLose;
 	
 	
 public:
@@ -44,10 +49,12 @@ public:
 	void setPuntuation(const int p);
 	void setWin();
 	void setLose();
+	void setEnemyPuntuation(const int p);
 
 	const std::string & getName();
 	const std::string & getEnemyName();
 	const int getPuntuation();
+	const int getEnemyPuntuation();
 	bool getWin();
 	bool getLose();
 
@@ -59,6 +66,8 @@ public:
 	std::string & getEnemyMessage();
 	void setMyMessage(const std::string & ms);
 	void setEnemyMessage(const std::string & ms);
+
+	std::string & getactualWord();
 
 
 };

@@ -10,17 +10,15 @@ enum gameStates {
 
 	CONNECT,
 	ASKNAMES,
-	PLAY
+	PLAY,
+	ENDGAME
 
 };
 #define NUMOFUSERS 3
-class Server
+#define NUMWORDS 5
+class Client
 {
-	/*
-	Si en send() == Sf::socket::partial
-
-	send(char* , size, sizeSent)
-	*/
+	
 private:
 	
 
@@ -30,10 +28,15 @@ private:
 	sf::IpAddress ip;
 	sf::Thread commandLineThread;
 	std::vector<sf::TcpSocket*> socket_list;
+	sf::Clock serverTimer;
 
+	Player player;
 
 
 	gameStates state;
+
+	std::vector<std::string> wordList;
+	int actualWord;
 
 	std::string messageRecieved;
 	std::string sendMessage;
@@ -43,17 +46,16 @@ private:
 	bool doOnce;
 	
 public:
-	Server();
-	~Server();
+	Client();
+	~Client();
 	void initServer();
 
 
 	int getTheFirstConnectionGap();
 
 	void recv();
-	
-
 	void recv_names();
+	void recv_gameplay();
 
 	void send(sf::String & ms);
 	void closeConnections();
@@ -61,8 +63,14 @@ public:
 	bool isConnected();
 	void throwCommandLine();
 
+	void restartGame();
+	void closeGame();
+
 	void sendToPlayer1(const sf::String & ms);
 	void sendToplayer2(const sf::String & ms);
+
+	std::string & selectNewWord();
+	void gameManager();
 	
 
 	std::string & getMessageRecieved();

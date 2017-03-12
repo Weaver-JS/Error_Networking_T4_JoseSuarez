@@ -20,7 +20,7 @@ private:
 	sf::Text chattingText;
 	sf::Text text;
 	sf::RectangleShape separator;
-	Server serverOrClient;
+	Client serverOrClient;
 	
 
 	windowManagement() {}

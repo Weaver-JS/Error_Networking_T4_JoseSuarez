@@ -16,7 +16,7 @@ void windowManagement::init(float x, float y, std::string chatName)
 
 void windowManagement::loop()
 {
-	sf::Thread server_listen(&Server::initServer, &serverOrClient);
+	sf::Thread server_listen(&Client::initServer, &serverOrClient);
 	
 	server_listen.launch();
 	

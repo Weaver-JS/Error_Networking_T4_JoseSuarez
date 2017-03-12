@@ -9,8 +9,8 @@
 
 
 
-Server::Server() :
-	commandLineThread(&Server::throwCommandLine, this)
+Client::Client() :
+	commandLineThread(&Client::throwCommandLine, this)
 {
 	
 	
@@ -19,16 +19,24 @@ Server::Server() :
 	connectionOn = true;
 	commandLineThread.launch();
 	doOnce = false;
+	wordList.resize(NUMWORDS);
+	wordList[0] = "palabra";
+	wordList[1] = "libro";
+	wordList[2] = "pastilla";
+	wordList[3] = "botella";
+	wordList[4] = "visual";
+	actualWord = -1;
+	
 }
 
 
-Server::~Server()
+Client::~Client()
 {
-	//closeConne{
+	
 	listener.close();
 }
 
-void Server::initServer()
+void Client::initServer()
 {
 	
 	std::cout << "Server working correctly" << std::endl;
@@ -44,10 +52,7 @@ void Server::initServer()
 			}
 			else if (status == sf::Socket::Done)
 			{
-
 				std::cout << "Vinculado correctamente al puerto " << REGULARPORT << std::endl;
-
-
 
 			}
 
@@ -86,7 +91,7 @@ void Server::initServer()
 		}
 		else if(doOnce)
 		{
-			sf::sleep(sf::seconds(2000.0f));
+			sf::sleep(sf::seconds(20000.0f));
 		}
 	}
 }
@@ -97,10 +102,11 @@ void Server::initServer()
 
 
 
-void Server::recv()
+void Client::recv()
 {
 	while (connectionOn)
 	{
+		
 		switch (state)
 		{
 		case CONNECT:
@@ -110,11 +116,15 @@ void Server::recv()
 			recv_names();
 			break;
 		case PLAY:
+			recv_gameplay();
+			break;
+		case ENDGAME:
+			closeGame();
 			break;
 		default:
 			break;
 		}
-
+		sf::sleep(sf::milliseconds(200.0f));
 	}
 }
 
@@ -122,7 +132,7 @@ void Server::recv()
 
 
 
-void Server::recv_names()
+void Client::recv_names()
 {
 	
 
@@ -135,10 +145,11 @@ void Server::recv_names()
 			switch (status)
 			{
 			case sf::Socket::Error:
+				closeConnections();
+				break;
 			case sf::Socket::Disconnected:
 				std::cout << "Fallo de conexión, no llegan los paquetes" << std::endl;
-				if (connectionOn)
-					closeConnections(i);
+				closeConnections();
 				break;
 			case sf::Socket::Partial:
 				std::cout << "ESTADO PARCIAL" << std::endl;
@@ -152,30 +163,156 @@ void Server::recv_names()
 					sf::String message = messageRecieved;
 					if (i == 0)
 					{
-						//player_1.setMessageInfo(messageRecieved);
-						//player_1.getMessageType();
-						//player_1.setNames(messageRecieved);
-						std::string messageToPlayer = PLAYER_2 + message;
-						message = PLAYER_1   + message;
-						sendToPlayer1(message);
-						sendToplayer2(messageToPlayer);
+						
+						std::string messageToPlayer = messageRecieved; 
+						std::string messageToPlayer2 = messageRecieved; 
+						player.setName(messageRecieved);
+						player.setProtocolTag(messageToPlayer, NAME, PLAYER_1);
+						player.setProtocolTag(messageToPlayer2, NAME, PLAYER_2);
+						sendToPlayer1(messageToPlayer);
+						sendToplayer2(messageToPlayer2);
+					}
+					else
+					{
+						std::string messageToPlayer = messageRecieved;
+
+						std::string messageToPlayer2 = messageRecieved;
+						player.setEnemyMessage(messageRecieved);
+						player.setProtocolTag(messageToPlayer, NAME, PLAYER_2);
+						player.setProtocolTag(messageToPlayer2, NAME, PLAYER_1);
+
+						
+						sendToPlayer1(messageToPlayer);
+						sendToplayer2(messageToPlayer2);
+					}
+
+
+					if (player.getName() != "" && player.getEnemyName() != "")
+					{
+						selectNewWord();
+						serverTimer.restart();
+						state = PLAY;
+					}
+
+				}
+				break;
+			default:
+				//	std::cout << "Se te olvido un estado, gilipollas. Es este para que no busques más" << status << " Gilipollas" << std::endl;
+				break;
+
+			}
+		}
+		
+	
+}
+
+void Client::recv_gameplay()
+{
+	if (wordList.size() > 0 )
+	{
+		gameManager();
+
+
+
+		for (int i = 0; i < socket_list.size(); i++)
+		{
+			char data[1300];
+			std::size_t bytesReceived;
+			sf::Socket::Status status = socket_list.at(i)->receive(data, sizeof(data), bytesReceived);
+
+			switch (status)
+			{
+			case sf::Socket::Error:
+				closeConnections();
+				break;
+			case sf::Socket::Disconnected:
+				std::cout << "Fallo de conexión, no llegan los paquetes" << std::endl;
+				closeConnections();
+				break;
+			case sf::Socket::Partial:
+				std::cout << "ESTADO PARCIAL" << std::endl;
+				break;
+
+			case sf::Socket::Done:
+				if (bytesReceived > 0)
+				{
+
+					messageRecieved = data;
+					sf::String message = messageRecieved;
+					if (i == 0)
+					{
+
+						std::string messageToPlayer = messageRecieved;
+						std::string messageToPlayer2 = messageRecieved;
+						if (messageToPlayer == ">" + wordList[actualWord])
+						{
+							int punt = player.getPuntuation();
+							punt++;
+							player.setPuntuation(punt);
+							std::string puntuationStringP1 = std::to_string(punt);
+							std::string puntuationStringP2 = puntuationStringP1;
+							player.setProtocolTag(puntuationStringP1, PUNTUATION, PLAYER_1);
+							player.setProtocolTag(puntuationStringP2, PUNTUATION, PLAYER_2);
+
+							sendToPlayer1(puntuationStringP1);
+							sendToplayer2(puntuationStringP2);
+							//Call restartGameFunc
+							restartGame();
+
+						}
+						else
+						{
+							sf::String ms = messageRecieved;
+							std::string message = messageRecieved;
+						
+							player.setProtocolTag(messageRecieved, REGULAR_WORD, PLAYER_1);
+							player.setProtocolTag(message, REGULAR_WORD, PLAYER_2);
+							sf::String msg = message;
+							sendToPlayer1(ms);
+							sendToplayer2(msg);
+							
+							
+							//send(ms);
+						}
+
+						
 					}
 					else
 					{
 
-						//player_2.setMessageInfo(messageRecieved);
-						//player_2.getMessageType();
-						//player_2.setNames(messageRecieved);
-						std::string messageToPlayer = PLAYER_2 + message;
-						message = PLAYER_1 + message;
-						sendToPlayer1(messageToPlayer);
-						sendToplayer2(message);
+						std::string messageToPlayer = messageRecieved;
+						if (messageToPlayer == ">" + wordList[actualWord])
+						{
+							int punt = player.getEnemyPuntuation();
+							punt++;
+							player.setPuntuation(punt);
+							std::string puntuationStringP1 = std::to_string(punt);
+							std::string puntuationStringP2 = puntuationStringP1;
+							player.setProtocolTag(puntuationStringP1, PUNTUATION, PLAYER_1);
+							player.setProtocolTag(puntuationStringP2, PUNTUATION, PLAYER_2);
+
+							sendToPlayer1(puntuationStringP2);
+							sendToplayer2(puntuationStringP1);
+
+							//Call restartGameFunc
+							restartGame();
+						}
+						else
+						{
+							sf::String ms = messageRecieved;
+							std::string message = messageRecieved;
+
+							player.setProtocolTag(messageRecieved, REGULAR_WORD, PLAYER_2);
+							player.setProtocolTag(message, REGULAR_WORD, PLAYER_1);
+							sf::String msg = message;
+							sendToPlayer1(ms);
+							sendToplayer2(msg);
+						}
+					
+					
 					}
 
 
-
-
-					//send(message);
 
 
 				}
@@ -186,11 +323,34 @@ void Server::recv_names()
 
 			}
 		}
-		sf::sleep(sf::milliseconds(200.0f));
+	}
+	else
+	{
+		if (player.getPuntuation() > player.getEnemyPuntuation())
+		{
+			std::string messageToPlayer1 = "";
+			player.setProtocolTag(messageToPlayer1, SUCCESS, PLAYER_1);
+			std::string messageToPlayer2 = "";
+			player.setProtocolTag(messageToPlayer2, FAILED, PLAYER_1);
+			sendToPlayer1(messageToPlayer1);
+			sendToplayer2(messageToPlayer2);
+		}
+		else
+		{
+			std::string messageToPlayer1 = "";
+			player.setProtocolTag(messageToPlayer1, SUCCESS, PLAYER_1);
+			std::string messageToPlayer2 = "";
+			player.setProtocolTag(messageToPlayer2, FAILED, PLAYER_1);
+			sendToPlayer1(messageToPlayer2);
+			sendToplayer2(messageToPlayer1);
+		}
+		state = ENDGAME;
+	}
 	
+
 }
 
-void Server::send(sf::String & ms)
+void Client::send(sf::String & ms)
 {
 	sendMessage = ms;
 
@@ -210,7 +370,7 @@ void Server::send(sf::String & ms)
 				}
 				else if (status == sf::Socket::Partial)
 				{
-					sf::String ms = sendMessage.substr(sendMessage.at(sentBytes), sendMessage.size());
+					sf::String ms = sendMessage.substr(sentBytes, sendMessage.size());
 					send(ms);
 				}
 				
@@ -219,7 +379,7 @@ void Server::send(sf::String & ms)
 	}
 }
 
-void Server::closeConnections()
+void Client::closeConnections()
 {
 	sf::String s = "exit";
 	send(s);
@@ -239,7 +399,7 @@ void Server::closeConnections()
 
 }
 
-void Server::closeConnections(int coord)
+void Client::closeConnections(int coord)
 {
 	std::cout << "User :" << socket_list.at(coord)->getRemoteAddress() << "With local port:" << socket_list.at(coord)->getLocalPort() << "And remote port " << socket_list.at(coord)->getRemotePort() << " Array coordinate:" << coord << std::endl;
 	socket_list.at(coord)->disconnect();
@@ -251,7 +411,7 @@ void Server::closeConnections(int coord)
 	
 }
 
-bool Server::isConnected()
+bool Client::isConnected()
 {
 	return connectionOn;
 }
@@ -261,7 +421,7 @@ constexpr unsigned int str2int(const char* str, int h = 0)
 	return !str[h] ? 5381 : (str2int(str, h + 1) * 33) ^ str[h];
 }
 
-void Server::throwCommandLine()
+void Client::throwCommandLine()
 {
 	std::string command;
 	while (connectionOn)
@@ -288,7 +448,41 @@ void Server::throwCommandLine()
 	commandLineThread.terminate();
 }
 
-void Server::sendToPlayer1(const sf::String & ms)
+void Client::restartGame()
+{
+	if(wordList.size() > 0)
+	{ 
+		if (selectNewWord() != "FALLO")
+		{
+			std::cout << wordList[actualWord] << std::endl;
+			sf::String ms = "restart";
+			send(ms);
+			sf::sleep(sf::milliseconds(100.0f));
+			std::string word = wordList[actualWord];
+			word = player.setProtocolTag(word, dWORD, PLAYER_1);
+			ms = word;
+			send(ms);
+			/*sendToPlayer1(word);
+			sendToplayer2(word);*/
+			serverTimer.restart();
+		}
+		else
+		{
+			wordList.erase(wordList.begin());
+		}
+}
+
+}
+
+void Client::closeGame()
+{
+	if (serverTimer.getElapsedTime() > sf::seconds(10.0))
+	{
+		closeConnections();
+	}
+}
+
+void Client::sendToPlayer1(const sf::String & ms)
 {
 	sendMessage = ms;
 
@@ -296,18 +490,20 @@ void Server::sendToPlayer1(const sf::String & ms)
 		if (sendMessage.length() > 0)
 		{
 			size_t sentBytes;
-			sf::Socket::Status status = socket_list.at(0)->send(sendMessage.c_str(), sendMessage.length() + 1, sentBytes);
+			
+
+			sf::Socket::Status status = socket_list[0]->send(sendMessage.c_str(), sendMessage.length() + 1, sentBytes);
 
 
 			if (status != sf::Socket::Done && status != sf::Socket::Partial)
 			{
 				std::cout << "Wrong connection, problem sending packages" << std::endl;
-				if (connectionOn)
+				if (!connectionOn)
 					closeConnections(0);
 			}
 			else if (status == sf::Socket::Partial)
 			{
-				sf::String ms = sendMessage.substr(sendMessage.at(sentBytes), sendMessage.size());
+				sf::String ms = sendMessage.substr(sentBytes, sendMessage.size());
 				sendToPlayer1(ms);
 			}
 
@@ -316,7 +512,7 @@ void Server::sendToPlayer1(const sf::String & ms)
 	
 }
 
-void Server::sendToplayer2(const sf::String & ms)
+void Client::sendToplayer2(const sf::String & ms)
 {
 	sendMessage = ms;
 
@@ -324,18 +520,18 @@ void Server::sendToplayer2(const sf::String & ms)
 	if (sendMessage.length() > 0)
 	{
 		size_t sentBytes;
-		sf::Socket::Status status = socket_list.at(1)->send(sendMessage.c_str(), sendMessage.length() + 1, sentBytes);
+		sf::Socket::Status status = socket_list[1]->send(sendMessage.c_str(), sendMessage.length() + 1, sentBytes);
 
 
 		if (status != sf::Socket::Done && status != sf::Socket::Partial)
 		{
 			std::cout << "Wrong connection, problem sending packages" << std::endl;
-			if (connectionOn)
+			if (!connectionOn)
 				closeConnections(1);
 		}
 		else if (status == sf::Socket::Partial)
 		{
-			sf::String ms = sendMessage.substr(sendMessage.at(sentBytes), sendMessage.size());
+			sf::String ms = sendMessage.substr(sentBytes, sendMessage.size());
 			sendToplayer2(ms);
 		}
 
@@ -343,7 +539,59 @@ void Server::sendToplayer2(const sf::String & ms)
 	}
 }
 
-std::string & Server::getMessageRecieved()
+std::string & Client::selectNewWord()
+{
+	if(actualWord != -1)
+	wordList.erase(wordList.begin() + actualWord);
+
+	if (wordList.size() > 0)
+	{
+		actualWord = rand() % wordList.size();
+		//std::cout << wordList[actualWord] << std::endl;
+		return wordList[actualWord];
+	}
+	
+	else
+	{
+		std::string p = "FALLO";
+		wordList.push_back(p);
+		return wordList[actualWord];
+	}
+	
+
+
+}
+
+void Client::gameManager()
+{
+	if (wordList.size() > 0)
+	{
+		if (serverTimer.getElapsedTime() > sf::seconds(10.0))
+		{
+			if (selectNewWord() != "FALLO")
+			{
+				std::cout << wordList[actualWord] << std::endl;
+				sf::String ms = "restart";
+				send(ms);
+				sf::sleep(sf::milliseconds(100.0f));
+				std::string word = wordList[actualWord];
+				word = player.setProtocolTag(word, dWORD, PLAYER_1);
+				ms = word;
+				send(ms);
+				/*sendToPlayer1(word);
+				sendToplayer2(word);*/
+				serverTimer.restart();
+			}
+			else
+			{
+				wordList.erase(wordList.begin());
+			}
+
+		}
+	}
+}
+
+std::string & Client::getMessageRecieved()
 {
 	return messageRecieved;
 }

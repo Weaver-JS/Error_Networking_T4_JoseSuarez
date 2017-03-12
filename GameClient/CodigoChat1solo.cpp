@@ -1,5 +1,5 @@
 #include "windowManagement.h"
-#include "Server.h"
+
 #define MAX_MENSAJES 30
 
 int main()
@@ -10,6 +10,6 @@ int main()
 
 	/*server_MainThread.terminate();
 	server_RecvThread.terminate();*/
-
+	
 	return 0;
 }
